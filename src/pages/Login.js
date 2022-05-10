@@ -22,7 +22,8 @@ function Login() {
       password: password
     }
 
-    axios.post("http://localhost:3001/auth/login", data)
+    // axios.post("http://localhost:3001/auth/login", data)
+    axios.post("https://full-stack-demo-api-rtj.herokuapp.com/auth/login", data)
       .then((response) => {
         
         if (response.data.error) {

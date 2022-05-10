@@ -20,12 +20,14 @@ export default function Profile() {
   // on page load set current username state via axios call
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/auth/basicInfo/${id}`)
+    // axios.get(`http://localhost:3001/auth/basicInfo/${id}`)
+    axios.get(`https://full-stack-demo-api-rtj.herokuapp.com/auth/basicInfo/${id}`)
       .then((response) => {
         setUsername(response.data.username)
       })
 
-    axios.get(`http://localhost:3001/posts/user/${id}`)
+    // axios.get(`http://localhost:3001/posts/user/${id}`)
+    axios.get(`https://full-stack-demo-api-rtj.herokuapp.com/posts/user/${id}`)
       .then((response) => {
         setUserPosts(response.data);
       })

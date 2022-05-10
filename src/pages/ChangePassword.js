@@ -8,7 +8,8 @@ export default function ChangePassword() {
 
 
   const changePassword = () => {
-    axios.put(`http://localhost:3001/auth/changepassword`, {
+    // axios.put(`http://localhost:3001/auth/changepassword`, {
+    axios.put(`https://full-stack-demo-api-rtj.herokuapp.com/auth/changepassword`, {
       oldPassword: oldPassword,
       newPassword: newPassword
     }, {

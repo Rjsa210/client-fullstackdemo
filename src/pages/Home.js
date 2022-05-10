@@ -28,7 +28,8 @@ function Home() {
 
 
 
-      axios.get("http://localhost:3001/posts",
+      // axios.get("http://localhost:3001/posts",
+      axios.get("https://full-stack-demo-api-rtj.herokuapp.com/posts",
         // headers must be sent with access token as it uses auth middleware
         {
           headers: {
@@ -49,7 +50,8 @@ function Home() {
 
 
   const likePost = (postId) => {
-    axios.post("http://localhost:3001/like", {
+    // axios.post("http://localhost:3001/like", {
+      axios.post("https://full-stack-demo-api-rtj.herokuapp.com/like", {
       postId: postId
     },
       {
